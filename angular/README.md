@@ -12,21 +12,21 @@
 
 2.2 - Add this content to .env
 
-`
+```
 DEPLOY_ENV="production"
 BASE_HREF="/"
 WEBSITE_FOLDER="/website/path/"
-`
+```
 
 2.3 - Add this content to .gitignore
 
-`
+```
 # deploy / server
 /deploy
 /logs
 .env
 .htaccess
-`
+```
 
 3 - Setup composer
 
@@ -45,16 +45,14 @@ Run this script:
 
 Add this content to ~/.bash_profile (if it is not already there)
 
-`
+```
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-`
+```
 
 6 - Install and setup node version
 
 6.1 Go to the project folder
 
 6.2 Run the command `nvm install` to install
-
-7 - Setup environment
 
