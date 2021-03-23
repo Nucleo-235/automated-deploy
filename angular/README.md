@@ -2,11 +2,32 @@
 
 ## Deploy on Hostinger
 
-1 - Download the project (using GIT)
+1 - Download and to base setup to the project (using GIT)
+
 
 2 - Download the deploy scripts (inside project folder)
 
+2.1 - Download
+
 `git clone https://github.com/Nucleo-235/automated-deploy deploy`
+
+2.2 - Add this content to .env
+
+`
+DEPLOY_ENV="production"
+BASE_HREF="/"
+WEBSITE_FOLDER="/website/path/"
+`
+
+2.3 - Add this content to .gitignore
+
+`
+# deploy / server
+/deploy
+/logs
+.env
+.htaccess
+`
 
 3 - Setup composer
 
@@ -38,10 +59,3 @@ export NVM_DIR="$HOME/.nvm"
 
 7 - Setup environment
 
-Add this content to .env
-
-`
-DEPLOY_ENV="production"
-BASE_HREF="/"
-WEBSITE_FOLDER="/website/path/"
-`
