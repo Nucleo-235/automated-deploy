@@ -2,8 +2,7 @@
 
 ## Deploy on Hostinger
 
-1 - Download and to base setup to the project (using GIT)
-
+1 - Download and to base setup to the project (using GIT, ideally using webhooks)
 
 2 - Download the deploy scripts (inside project folder)
 
