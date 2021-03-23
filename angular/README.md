@@ -6,6 +6,8 @@
 
 2 - Download the deploy scripts (inside project folder)
 
+`git clone https://github.com/Nucleo-235/automated-deploy deploy`
+
 3 - Setup composer
 
 3.1 Copy the base-composer.json as composer.json
