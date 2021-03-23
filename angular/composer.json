@@ -1,0 +1,17 @@
+{
+    "name": "VENDOR/project-identifier",
+    "description": "Project Name",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "post-update-cmd": [
+          "export $(cat .env | xargs) && . \"$PWD/deploy/angular/scripts/on-update.sh\""
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex dist/index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteCond  %{DOCUMENT_ROOT}/dist/$1 -s
+    RewriteRule  ^(.*)$  /dist/$1  [L,QSA]
+
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^(.*)$ dist/index.html [L]
+</IfModule>
