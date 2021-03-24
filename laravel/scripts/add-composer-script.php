@@ -24,6 +24,6 @@ if (false === $index) {
   $composerConfig['scripts']['post-update-cmd'][] = $command;
 }
 
-file_put_contents('composer.json', json_encode($composerConfig, JSON_PRETTY_PRINT));
+file_put_contents('composer.json', json_encode($composerConfig, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 ?>
