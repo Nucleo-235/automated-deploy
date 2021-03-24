@@ -14,7 +14,7 @@ if (!array_key_exists('post-update-cmd', $composerConfig['scripts'])) {
 $command = 'cghooks update';
 $index = array_search($command, $composerConfig['scripts']['post-update-cmd'], false);
 if (false !== $index) {
-  $composerConfig['scripts']['post-update-cmd'][(int)$index] = 'cghooks update > /dev/null 2>&1';
+  unset($composerConfig['scripts']['post-update-cmd'][(int)$index]);
 }
 
 // Add the deploy script
