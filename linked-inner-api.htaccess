@@ -6,8 +6,9 @@ DirectoryIndex dist/index.html
 
     RewriteRule ^api/ - [L]
 
-    RewriteCond  %{DOCUMENT_ROOT}/dist/$1 -s
-    RewriteRule  ^(.*)$  /dist/$1  [L,QSA]
+    RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2
+    RewriteCond %{DOCUMENT_ROOT}%1dist/%2 -f
+    RewriteRule ^(.*)$  dist/$1 [END]
 
     RewriteCond %{REQUEST_FILENAME} -s [OR]
     RewriteCond %{REQUEST_FILENAME} -l [OR]
