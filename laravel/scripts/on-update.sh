@@ -14,12 +14,12 @@ SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 echo "  SCRIPTS_DIR: $SCRIPTS_DIR"  >> $log_file
 
 if isCommandAvailable "cghooks" ; then
-  echo "/   ON-UPDATE: CGHOOKS" >> $log_file
+  echo "   ON-UPDATE: CGHOOKS" >> $log_file
   cghooks update >> $log_file
 fi
 
 if [ "$DEPLOY_ENV" = "production" ]; then
-  echo "/   ON-UPDATE: BASH" >> $log_file
+  echo "   ON-UPDATE: BASH" >> $log_file
   source ~/.bash_profile
 
   echo "   ON-UPDATE: migrate" >> $log_file
