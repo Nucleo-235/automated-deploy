@@ -18,7 +18,7 @@ if (false !== $index) {
 }
 
 // Add the deploy script
-$command = 'export $(cat .env | xargs) && . \"$PWD/deploy/laravel/scripts/on-update.sh\"';
+$command = 'export $(cat .env | xargs) && . "$PWD/deploy/laravel/scripts/on-update.sh"';
 $index = array_search($command, $composerConfig['scripts']['post-update-cmd'], false);
 if (false === $index) {
   $composerConfig['scripts']['post-update-cmd'][] = $command;
