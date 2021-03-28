@@ -58,3 +58,8 @@ export NVM_DIR="$HOME/.nvm"
 
 6.2 Run the command `nvm install` to install
 
+7 - Create logs folder
+
+```
+mkdir logs
+```

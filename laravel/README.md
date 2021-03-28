@@ -54,3 +54,9 @@ git clone https://github.com/Nucleo-235/automated-deploy deploy
 ```
 DEPLOY_ENV="production"
 ```
+
+3.4 - Add logs folder
+
+```
+mkdir logs
+```
