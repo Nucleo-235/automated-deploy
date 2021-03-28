@@ -16,21 +16,41 @@
 .htaccess
 ```
 
-2 - Download the deploy scripts (inside project folder)
-
-2.1 - Download
-
-`git clone https://github.com/Nucleo-235/automated-deploy deploy`
-
-2.2 - Add this content to .env
+1.3 Download the deploy scripts (inside project folder)
 
 ```
-DEPLOY_ENV="production"
+git clone https://github.com/Nucleo-235/automated-deploy deploy
 ```
 
-3 - Setup existing composer
+1.4 - Setup existing composer
 
 ```
 php deploy/laravel/scripts/add-composer-script.php
 
+```
+
+1.5 - Commit and Push
+
+
+2 - Setup Git Deploy on Hostinger
+
+3 - Setup Server Project
+
+3.1 - Update the branch
+
+```
+git pull
+```
+
+3.2 Download the deploy scripts (inside project folder)
+
+```
+git clone https://github.com/Nucleo-235/automated-deploy deploy
+```
+
+
+3.3 - Add this content to .env
+
+```
+DEPLOY_ENV="production"
 ```
