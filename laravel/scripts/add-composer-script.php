@@ -21,7 +21,11 @@ if (false !== $index) {
 $command = 'export $(cat .env | xargs) && . "$PWD/deploy/laravel/scripts/on-update.sh"';
 $index = array_search($command, $composerConfig['scripts']['post-update-cmd'], false);
 if (false === $index) {
-  $composerConfig['scripts']['post-update-cmd'][] = $command;
+    if (count($composerConfig['scripts']['post-update-cmd']) == 0) {
+        $composerConfig['scripts']['post-update-cmd'] = [ $command ];
+    } else {
+        array_push($composerConfig['scripts']['post-update-cmd'], $command);
+    }
 }
 
 file_put_contents('composer.json', json_encode($composerConfig, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
