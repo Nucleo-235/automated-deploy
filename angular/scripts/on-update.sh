@@ -10,7 +10,7 @@ echo "  SCRIPTS_DIR: $SCRIPTS_DIR"  >> $log_file
 
 if [ "$DEPLOY_ENV" = "production" ]; then
   echo "   ON-UPDATE: BASH" >> $log_file
-  source ~/.bash_profile
+  touch ~/.bash_profile && source ~/.bash_profile
 
   echo "   ON-UPDATE: NVM" >> $log_file
   nvm use >> $log_file

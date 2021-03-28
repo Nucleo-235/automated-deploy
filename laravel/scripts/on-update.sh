@@ -20,7 +20,7 @@ fi
 
 if [ "$DEPLOY_ENV" = "production" ]; then
   echo "   ON-UPDATE: BASH" >> $log_file
-  source ~/.bash_profile
+  touch ~/.bash_profile && source ~/.bash_profile
 
   echo "   ON-UPDATE: migrate" >> $log_file
   php artisan migrate >> $log_file
