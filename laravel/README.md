@@ -2,7 +2,7 @@
 
 ## Deploy on Hostinger
 
-1 - Setup project
+1 - Setup project (Locally)
 
 1.1 - Download and to base setup to the project (using GIT, ideally using webhooks)
 
@@ -34,7 +34,7 @@ php deploy/laravel/scripts/add-composer-script.php
 
 2 - Setup Git Deploy on Hostinger
 
-3 - Setup Server Project
+3 - Setup Project (server)
 
 3.1 - Update the branch
 
