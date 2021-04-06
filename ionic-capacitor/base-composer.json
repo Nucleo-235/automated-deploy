@@ -11,7 +11,7 @@
     "require": {},
     "scripts": {
         "post-update-cmd": [
-          "export $(cat .env | xargs) && . \"$PWD/deploy/angular/scripts/on-update.sh\""
+          "export $(cat .env | xargs) && . \"$PWD/deploy/ionic-capacitor/scripts/on-update.sh\""
         ]
     }
 }
